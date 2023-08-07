@@ -9,6 +9,7 @@ public class Binary_search {
         System.out.println(agnostic_search(nums2, 4));
     }
     //The basic_search will work only if the given array is in ascending order.
+    //The below functions return the position value of the target element.
     static int basic_search(int[] nums, int target){
         int start = 0;
         int end  = nums.length - 1;
