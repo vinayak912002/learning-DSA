@@ -4,9 +4,8 @@ package searching_algorithms.binary_search.two_dimentional_array;
 //in any searching algorithms trying to somehow reduce the search space is a good strategy.
 
 import java.util.Arrays;
-import java.util.EnumSet;
 
-public class Binary_search {
+public class Search {
     public static void main(String[] args) {
         int[][] nums = {
                 {1, 2, 3},
@@ -30,4 +29,3 @@ public class Binary_search {
         return new int[]{-1, -1};
     }
 }
-
