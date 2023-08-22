@@ -1,4 +1,4 @@
-package searching_algorithms.binary_search.one_dimentional_array;
+package algorithms.searching_algorithms.binary_search.one_dimentional_array;
 
 
 //Binary search can only be applied if the numbers are arranged in ascending or descending order.

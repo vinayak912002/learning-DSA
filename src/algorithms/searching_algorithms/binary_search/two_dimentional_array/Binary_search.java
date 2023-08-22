@@ -1,4 +1,4 @@
-package searching_algorithms.binary_search.two_dimentional_array;
+package algorithms.searching_algorithms.binary_search.two_dimentional_array;
 
 import java.util.Arrays;
 

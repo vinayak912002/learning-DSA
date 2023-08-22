@@ -1,4 +1,4 @@
-package searching_algorithms.binary_search.two_dimentional_array;
+package algorithms.searching_algorithms.binary_search.two_dimentional_array;
 
 //to apply binary search in a two-dimensional array all of its elements must be arranged in order either-ascending or descending.
 //in any searching algorithms trying to somehow reduce the search space is a good strategy.
