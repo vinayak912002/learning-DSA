@@ -11,7 +11,7 @@ public class Selection_sort {
         }
         return index;
     }
-    static int smallestElement(int[] nums, int start, int end){
+    static int smallestElementIndex(int[] nums, int start, int end){
         int index = 0;
         for (int i = 0; i <= end;i++){
             if (nums[i] < nums[index]) index = i;
@@ -28,9 +28,17 @@ public class Selection_sort {
             swap(arr, largestElementIndex(arr, 0, i), i);
         }
     }
+    static void selectionSortDesc(int[] arr){
+        for(int i = arr.length - 1; i >= 0; i--){
+            swap(arr, smallestElementIndex(arr, 0, i), i);
+        }
+    }
     public static void main(String[] args) {
         int[] nums = {5,4,3,2,1};
+        int[] nums2 = {1,2,3,4,5};
         selectionSortAsc(nums);
+        selectionSortDesc(nums2);
         System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(nums2));
     }
 }
