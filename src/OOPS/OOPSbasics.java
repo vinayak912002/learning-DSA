@@ -28,6 +28,12 @@ public class OOPSbasics {
         System.out.println(arpit.name);
         System.out.println(arpit.marks);
 
+        Student2 garbageCollectionExample;
+        for(int i = 0; i <= 1000000; i++){
+            garbageCollectionExample = new Student2();// we are creating several instances of the STUDENT2 class
+                                                      // so that the garbage collection gets started and the finalize method gets triggered.
+        }
+
     }
 }
 class Student{
@@ -65,5 +71,12 @@ class Student2{
 
         //it is used to pass default values to the parameters if no value is provided
     }
+    //there is a destructor that is called whenever an object is destroyed.
+    //In c++ this is done manually but in java this happens automatically whenever garbage collection happens.
+    //we cannot change it, but we can specify what to do whenever an object is destroyed through the finalise method.
 
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("object STUDENT destroyed");
+    }
 }

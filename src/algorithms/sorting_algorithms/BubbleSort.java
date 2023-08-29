@@ -13,16 +13,26 @@ public class BubbleSort {
     }
     static void sortAsc(int[] nums){
         for(int i = 0; i < nums.length - 1; i++){
+            boolean swapped = false;
             for(int j = 0; j < (nums.length - 1) - i; j++){
-                if (nums[j] > nums[j + 1]) swap(nums, j, j + 1);
+                if (nums[j] > nums[j + 1]) {
+                    swap(nums, j, j + 1);
+                    swapped = true;
+                }
             }
+            if (!swapped) break; //if no number is swapped that means that all the elements are sorted
         }
     }
     static void sortDec(int[] nums){
         for(int i = 0; i < nums.length - 1; i++){
+            boolean swapped = false;
             for(int j = 0; j < (nums.length - 1) - i; j++){
-                if (nums[j] < nums[j + 1]) swap(nums, j, j + 1);
+                if (nums[j] < nums[j + 1]) {
+                    swap(nums, j, j + 1);
+                    swapped = true;
+                }
             }
+            if (!swapped) break;
         }
     }
     static void swap(int[] arr, int first, int second){
