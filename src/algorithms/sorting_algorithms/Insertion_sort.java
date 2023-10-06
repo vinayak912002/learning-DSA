@@ -8,26 +8,30 @@ public class Insertion_sort {
     // Step 2 : [3,5,4],2,1 ==> 3,4,5,2,1
     // Step 3 : [3,4,5,2],1 ==> 2,3,4,5,1
     // Step 4 : [2,3,4,5,1] ==> 1,2,3,4,5 and the list is sorted
-    static void swap(int[] arr, int first, int second){
-        int temp = arr[second];
-        arr[second] = arr[first];
-        arr[first] = temp;
-    }
+
 //basically there are two pointers i and j
     //the i pointer keeps track of the size of the array in which we are currently working
     //the j pointer helps us to sort the array
     static void insertionSortAsc(int[] nums){
         for (int i = 1; i < nums.length; i++){
-            for (int j = i; j > 0; j--){
-                if(nums[j - 1] > nums[j]) swap(nums, j-1, j);
+            int j = i - 1;
+            int key = nums[i];
+            while(j >= 0 && nums[j] > key){
+                nums[j+1] = nums[j];
+                j--;
             }
+            nums[j+1] = key;
         }
     }
     static void insertionSortDesc(int[] nums){
         for (int i = 1; i < nums.length; i++){
-            for (int j = i; j > 0; j--){
-                if(nums[j - 1] < nums[j]) swap(nums, j-1, j);
+            int j = i - 1;
+            int key = nums[i];
+            while(j >= 0 && nums[j] < key){
+                nums[j+1] = nums[j];
+                j--;
             }
+            nums[j+1] = key;
         }
     }
 
