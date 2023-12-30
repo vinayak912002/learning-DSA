@@ -1,5 +1,4 @@
-package data_structures;
-import data_structures.MyHashMap;//to import a class use {import <package name>.<class name>}
+package data_structures.hashMaps;
 
 public class Main {
     public static void main(String[] args) {
